@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="google-signin-client_id" content="274244240532-5j80jckl3s7r0jf90ols5o73a4s72j0a.apps.googleusercontent.com">
+
+      <!-- Bootstrap core CSS -->
+      <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="./css/small-business.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+    <script src="app_module.js"></script>
+
+    <!-- DFF -->
+    <script src="./homeController.js"></script>
+    <!-- Google Login -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  </head>
+
+  <body ng-app="CustomerApp" ng-controller="myCtrl">
+
+
+
+    <div ng-view></div>
+
+    <!--
+    <header>
+      <div class="header-title">
+        <h1>Cloud Project</h1>
+      </div>
+    </header>
+
+    <div class="section-divs">
+        <div>
+            <input class="float-left" type='text' id="searchTextBoxId" ng-model="searchTextBox" autocomplete="off" placeholder='Search'/>
+            <span class='mic_span float-left' ng-click="start()" style="margin-left: 3px; margin-top: 4px;"><a class="fa fa-microphone fa-lg icon" style="cursor: pointer;"></a></span>
+            <button class="search-btn" type="button" ng-click="searchButtonClick()">Search</button>
+        </div>
+    </div>
+    -->
+
+    <div class="headerBar">
+        <div class="user-photo"><img src="images/ana.JPG"></div>
+        <p class="title">Cloud Project</p>
+    </div>
+
+    <div class="chatbox">
+        <div class="chatlogs" id="chatlogs-id">
+            <div class="chat friend">
+                <div class="user-photo"><img src="images/ana.JPG"></div>
+                <p class="chat-message">Hello!</p>
+            </div>
+
+            <div class="chat friend" id="loadingGif" style="display: none;">
+                <div class="user-photo"><img src="images/ana.JPG"></div>
+                <div class="gif"><img src="images/loading.gif"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="chat-form">
+        <div id="inputDiv">
+            <div id="buttonDiv"></div>
+            <textarea class="input" placeholder="Message" rows="1" data-min-rows='1' id="searchTextBoxId"></textarea>
+        </div>
+        <div id="chat-form-buttons">
+            <input type="image" id="rec" src="images/microphone.png" ng-click="start()">
+            <input type="image" src="images/next.png" id="switchInputType" ng-click="searchButtonClick()"/>
+            <input type="image" src="images/attach.png" class="chat-icons" ngf-select="uploadPhoto($file)"/>
+        </div>
+    </div>
+
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.422.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js"></script>
+    <script src="vendor/jwt-decode.min.js"></script>
+
+  </body>
+
+</html>
